@@ -1,7 +1,7 @@
 import React from 'react';
 import logo, { ReactComponent } from './logo.svg';
 import './App.css';
-import { Link, Switch, Route, BrowserRouter } from 'react-router-dom';
+import { Link, Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
 
 import { Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,6 +17,7 @@ class App extends React.Component{
       <Switch>
       <Route exact path="/login" component={Login} />
       <Route exact path="/Dashbord" component={Dashbord}/>
+      <Redirect to="/login"/>
       </Switch>
       </div>
       </BrowserRouter>

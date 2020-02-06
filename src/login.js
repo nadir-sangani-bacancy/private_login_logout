@@ -36,7 +36,7 @@ class Login extends React.Component {
                     <Form.Group controlId="formBasicCheckbox">
                     </Form.Group>
                     <Link to="/Dashbord">
-                        <Button variant="outline-success" onClick={()=>{localStorage.setItem('email',this.state.email)}}>Login</Button>
+                        <Button variant="outline-success" onClick={()=>{this.props.history.replace('/Dashbord');localStorage.setItem('email',this.state.email)}}>Login</Button>
                     </Link>
                     </Jumbotron>
                 </Form>
